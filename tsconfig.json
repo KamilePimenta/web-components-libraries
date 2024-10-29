@@ -2,6 +2,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@kamis/auth": [
+        "dist/kamis/auth"
+      ],
+      "@kamis/design-system": [
+        "dist/kamis/design-system"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

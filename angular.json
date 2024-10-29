@@ -3,5 +3,74 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "@kamis/auth": {
+      "projectType": "library",
+      "root": "projects/kamis/auth",
+      "sourceRoot": "projects/kamis/auth/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/kamis/auth/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/kamis/auth/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/kamis/auth/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/kamis/auth/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "@kamis/design-system": {
+      "projectType": "library",
+      "root": "projects/kamis/design-system",
+      "sourceRoot": "projects/kamis/design-system/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/kamis/design-system/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/kamis/design-system/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/kamis/design-system/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/kamis/design-system/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
   }
 }
